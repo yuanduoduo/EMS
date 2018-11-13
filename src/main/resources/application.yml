@@ -13,10 +13,9 @@ spring:
       max-request-size: 100MB
   mvc:
     view:
-      prefix: /ems1.0/
-      suffix: .jsp
+      prefix: /(      suffix: .jsp
   profiles:
     active: test
 mybatis:
+  mapper-locations: classpath*:com/baizhi/mapper/*.xml
   type-aliases-package: com.baizhi.entity
-  mapper-locations: classpath:com/baizhi/mapper/*.xml
