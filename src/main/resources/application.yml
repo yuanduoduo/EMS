@@ -18,5 +18,5 @@ spring:
   profiles:
     active: test
 mybatis:
-  mapper-locations: classpath*:com.baizhi.service
   type-aliases-package: com.baizhi.entity
+  mapper-locations: classpath:com/baizhi/mapper/*.xml

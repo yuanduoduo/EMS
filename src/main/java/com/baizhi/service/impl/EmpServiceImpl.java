@@ -5,7 +5,6 @@ import com.baizhi.entity.Emp;
 import com.baizhi.service.EmpService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
@@ -49,7 +48,7 @@ public class EmpServiceImpl implements EmpService {
         empDao.update(emp);
     }
 
-    @Transactional(propagation = Propagation.SUPPORTS)
+
     public List<Emp> findAll(String id) {
         List<Emp> findAll = empDao.queryAll(id);
         return findAll;

@@ -5,7 +5,6 @@ import com.baizhi.entity.Dept;
 import com.baizhi.service.DeptService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
@@ -24,7 +23,6 @@ public class DeptServiceImpl implements DeptService {
         deptDao.delete(id);
     }
 
-    @Transactional(propagation = Propagation.SUPPORTS)
     public List<Dept> findAll() {
         List<Dept> queryAll = deptDao.queryAll();
         return queryAll;
