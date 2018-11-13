@@ -13,7 +13,8 @@ spring:
       max-request-size: 100MB
   mvc:
     view:
-      prefix: /(      suffix: .jsp
+      prefix: /
+      suffix: .jsp
   profiles:
     active: test
 mybatis:
