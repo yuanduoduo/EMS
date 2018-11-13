@@ -4,14 +4,14 @@
     <insert id="insert" parameterType="Emp">
 		insert into emp_emp values(#{id},#{name},#{salary},#{age},#{bir},#{dept})
 	</insert>
-    <delete id="delete" parameterType="Emp">
+    <delete id="delete" parameterType="String">
 		delete from emp_emp where id=#{id}
 	</delete>
     <!--<select id="queryAll" parameterType="Emp" resultType="Emp">-->
     <!--select * from emp_emp;-->
     <!--</select>-->
     <select id="queryAll" parameterType="String" resultType="Emp">
-		select * from emp_emp where d_id=#{dept};
+		select * from emp_emp where d_id=#{id};
 	</select>
 
 

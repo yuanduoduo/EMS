@@ -4,14 +4,14 @@
     <insert id="insert" parameterType="Dept">
 		insert into ems_dept values(#{id},#{name})
 	</insert>
-    <delete id="delete" parameterType="Dept">
+    <delete id="delete" parameterType="String">
 		delete from ems_dept where id=#{id}
 	</delete>
     <update id="update" parameterType="Dept">
 		update ems_dept set id=#{id},name=#{name}
 		where id=#{id}
 	</update>
-    <select id="queryAll" parameterType="Dept" resultType="Dept">
+    <select id="queryAll" resultType="Dept">
 		select id,name from ems_dept
 	</select>
 
