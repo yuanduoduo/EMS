@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.baizhi.dao.EmpDao">
+    <insert id="insert" parameterType="Emp">
+		insert into emp_emp values(#{id},#{name},#{salary},#{age},#{bir},#{dept})
+	</insert>
+    <delete id="delete" parameterType="Emp">
+		delete from emp_emp where id=#{id}
+	</delete>
+    <!--<select id="queryAll" parameterType="Emp" resultType="Emp">-->
+    <!--select * from emp_emp;-->
+    <!--</select>-->
+    <select id="queryAll" parameterType="String" resultType="Emp">
+		select * from emp_emp where d_id=#{dept};
+	</select>
+
+
+    <update id="update" parameterType="Emp">
+		update emp_emp 
+		set name=#{name},salary=#{salary},age=#{age},bir=#{bir},dept=#{dept}
+		where id=#{id}
+		
+	</update>
+</mapper>
