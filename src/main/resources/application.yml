@@ -13,7 +13,7 @@ spring:
       max-request-size: 100MB
   mvc:
     view:
-      prefix: /
+      prefix: /ems1.0/
       suffix: .jsp
   profiles:
     active: test
